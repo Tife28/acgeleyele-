@@ -1,0 +1,565 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Demo project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col top_bar_content d-flex flex-row align-items-center justify-content-start">
+						
+						<div class="donations_button ml-auto">
+							<a href="#">All The Gospel</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- Header Content -->
+
+        <div class="header_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+
+                            <!-- Logo -->
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <a href="#">
+										<span> All The Gospel </span>
+										<img src="{% static 'images/download1.jpg' %}" alt="">
+										<h3>ASSEMBLIES OF GOD CHURCH</h3>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Navigation and Search -->
+                            <div class="header_nav_container ml-auto">
+                                <nav class="main_nav">
+                                    <ul>
+                                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+										<li><a href="{% url 'ministriess' %}">Ministries</a></li>
+                                        <li><a href="{% url 'sermons' %}">Sermons</a></li>
+										<li><a href="{% url 'blog' %}">Blog</a></li>
+										<li><a href="{% url 'bulletins' %}">Bulletin</a></li>
+                                        <li><a href="{% url 'abouts' %}">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="search">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="13px" height="14px">
+                                        <path class="search_path" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" fill="#353535"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="header_search_container">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+                                                <form action="#" class="header_search_form">
+                                                    <input type="search" class="search_input" placeholder="Search" required="required">
+                                                    <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_2" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="20px" height="20px">
+                                                            <path class="search_path" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" fill="#353535"/>
+                                                        </svg>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>			
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="home">
+            
+        <!-- Home Slider -->
+
+        <div class="home_slider_container">
+            <div class="owl-carousel owl-theme home_slider">
+
+                <!-- Home Slider Item -->
+				<div class="owl-item">
+                    <div class="home_slider_background" style="background-image:url({% static 'images/home_slider_background.jpg' %});"></div>
+                    <div class="home_slider_content text-center">
+                        <div class="cross_1 d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/cross_1.png' %}" alt=""></div>
+                        <h1>All The Gospel</h1>
+                        <div class="button home_slider_button"><a href="#">Come and join us</a></div>
+                    </div>
+                </div>
+                <!-- Home Slider Item -->
+                <div class="owl-item">
+                    <div class="home_slider_background" style="background-image:url({% static 'images/home_slider_background.jpg' %});"></div>
+                    <div class="home_slider_content text-center">
+                        <div class="cross_1 d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/cross_1.png' %}" alt=""></div>
+                        <h1>Outstanding Miracles</h1>
+                        <div class="button home_slider_button"><a href="#">Come and join us</a></div>
+                    </div>
+                </div>
+                <!-- Home Slider Item -->
+                <div class="owl-item">
+                    <div class="home_slider_background" style="background-image:url({% static 'images/home_slider_background.jpg' %});"></div>
+                    <div class="home_slider_content text-center">
+                        <div class="cross_1 d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/cross_1.png' %}" alt=""></div>
+                        <h1>God is all around us</h1>
+                        <div class="button home_slider_button"><a href="#">Come and join us</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home_slider_nav d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/arrow_r.png' %}" alt=""></div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_1.png' %}" alt=""></div>
+						<div class="section_title"><h2>Welcome to Our Church</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row intro_content">
+
+				<!-- Intro Text -->
+				<div class="col-lg-6">
+					<div class="intro_text">
+						<p>Assemblies of God is a christian denomination. The doctrinal position of the Assemblies of God is framed in a classical 
+							Pentecostal and evangelical context. The AG is Trinitarian. It believes that the Bible is divinely inspired and the
+							 infallible authoritative rule of faith and conduct. Baptism by immersion is practiced as an ordinance which was instituted 
+							 by Christ for those who have been saved. The Assemblies of God also places a strong emphasis on the fulfillment of the Great 
+							 Commission and it believes that this is the calling of the church.</p>
+						<div class="button intro_button"><a href="#">Read More</a></div>
+					</div>
+				</div>
+
+				<!-- Intro Image -->
+
+				<div class="col-lg-6">
+					<div class="intro_image"><img src="{% static 'images/intro.jpg' %}" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Services -->
+
+	<div class="services">
+		<div class="services_background"><img src="{% static 'images/services.jpg' %}" alt=""></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_2.png' %}" alt=""></div>
+						<div class="section_title"><h2>Our Church main activities</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="services_text text-center"><p></p></div>
+				</div>
+			</div>
+			<div class="row services_row">
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_1.png' %}" alt=""></div>
+						<div class="services_title">Sunday School</div>
+					</div>
+				</div>
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_2.png' %}" alt=""></div>
+						<div class="services_title">Communion</div>
+					</div>
+				</div>
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_3.png' %}" alt=""></div>
+						<div class="services_title">Sermoms</div>
+					</div>
+				</div>
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_4.png' %}" alt=""></div>
+						<div class="services_title">Vigils</div>
+					</div>
+				</div>
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_5.png' %}" alt=""></div>
+						<div class="services_title">Bible Study</div>
+					</div>
+				</div>
+
+				<!-- Services Item -->
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="services_item text-center">
+						<div class="services_image"><img src="{% static 'images/services_6.png' %}" alt=""></div>
+						<div class="services_title">Prayers</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Sermon -->
+
+	<div class="sermon">
+		<div class="sermon_background" style="background-image:url({% static 'images/sermon.png' %})"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_3.png' %}" alt=""></div>
+						<div class="section_title"><h2>Today's Sermon</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row sermon_row">
+
+				<!-- Sermon Image -->
+				<div class="col-lg-6">
+					<div class="sermon_image"><img src="{% static 'images/sermon_image.jpg' %}" alt=""></div>
+				</div>
+				
+				<!-- Sermon Content -->
+				<div class="col-lg-6">
+					<div class="sermon_content">
+						<div class="sermon_title">Timeless Blessings for Responsible Family members</div>
+						<ul class="sermon_list">
+							<li>Sermon by: <a href="#">Priest Jack Smith</a></li>
+							<li>Sermon Text: <a href="#">Deuteronomy 28:1-14, Numbers 6:22-27</a></li>
+							<li>Date: <a href="#">Sunday 09 August, 2020</a></li>
+						</ul>
+						<div class="sermon_text">
+							<p>There is blekkiurakjko nkskemuiuoqo quote_backgroundjo wekiuhwe isuhewv uh oiOEF odra
+								oifarh goighral iiagkoa  ioewlkp9 rghoknkioriiwl joen  iowern ier oewflit gjleo lwiriowe 9wjeif.
+							</p>
+						</div>
+						<div class="button sermon_button"><a href="sermon/">Read More</a></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Causes -->
+
+	<div class="causes">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_4.png' %}" alt=""></div>
+						<div class="section_title"><h2>Our Church's Causes</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="causes_slider_container">
+
+						<!-- Causes Slider -->
+						<div class="owl-carousel owl-theme causes_slider">
+
+							<!-- Causes Slider Item -->
+							<div class="owl-item text-center causes_item">
+								<div class="causes_item_image"><img src="{% static 'images/causes_1.jpg' %}" alt=""></div>
+								<div class="causes_item_title">Children's aid</div>
+								<div class="causes_item_text">
+									<p>But Jesus said, Suffer little children to come unto me, and forbid them not: for of such is the kingdom of God.<br>
+									Matthew 19:14 KJV</p>
+								</div>
+							</div>
+
+							<!-- Causes Slider Item -->
+							<div class="owl-item text-center causes_item">
+								<div class="causes_item_image"><img src="{% static 'images/causes_2.jpg' %}" alt=""></div>
+								<div class="causes_item_title">Aid for the Elderly</div>
+								<div class="causes_item_text">
+									<p>And the Lord said unto Moses, Go on before the people, and take with thee of the elders of Israel.<br>
+									Exodus 17:5a KJV</p>
+								</div>
+							</div>
+
+							<!-- Causes Slider Item -->
+							<div class="owl-item text-center causes_item">
+								<div class="causes_item_image"><img src="{% static 'images/causes_3.jpg' %}" alt=""></div>
+								<div class="causes_item_title">Community Food</div>
+								<div class="causes_item_text">
+									<p>And they that did eat of the loaves were about five thousand men.<br>
+									Mark 6:44 KJV</p>
+								</div>
+							</div>
+
+							<!-- Causes Slider Item -->
+							<div class="owl-item text-center causes_item">
+								<div class="causes_item_image"><img src="{% static 'images/causes_4.jpg' %}" alt=""></div>
+								<div class="causes_item_title">Sunday School</div>
+								<div class="causes_item_text">
+									<p>Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me.<br>
+									John 5:39 KJV</p>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="causes_slider_nav causes_slider_prev trans_200 d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/arrow_l.png' %}" alt=""></div>
+						<div class="causes_slider_nav causes_slider_next trans_200 d-flex flex-column align-items-center justify-content-center"><img src="{% static 'images/arrow_r.png' %}" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Quote -->
+
+	<div class="quote">
+		<div class="quote_background"><img src="{% static 'images/quote.jpg' %}" alt=""></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_5.png' %}" alt=""></div>
+						<div class="section_title"><h2>Quote of the day</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row quote_row">
+				<div class="col text-center">
+					<div class="quote_char"><img src="{% static 'images/quote_char.png' %}" alt=""></div>
+					<div class="quote_text">One thing have I desired of the LORD, that will I seek after: that I may dwell in the house of the LORD all 
+						the days of my life, to behold the beauty of the LORD and to enquire in his temple.</div>
+					<div class="quote_source">Psalm 27:4 KJV</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_image"><img src="{% static 'images/church_6.png' %}" alt=""></div>
+						<div class="section_title"><h2>Latest News</h2></div>
+						<div class="section_subtitle">All The Gospel</div>
+					</div>
+				</div>
+			</div>
+			<div class="row news_row">
+
+				<!-- News Item -->
+				<div class="col-lg-4 news_col">
+					<div class="news_item">
+						<div class="news_image">
+							<img src="{% static 'images/news_1.jpg' %}" alt="">
+							<div class="news_date d-flex flex-column align-items-center justify-content-center">
+								<div class="news_day">06</div>
+								<div class="news_month">March, 2018</div>
+							</div>
+						</div>
+						<div class="news_content">
+							<div class="news_title">Latest news in the '18 community</div>
+							<div class="news_text">
+								<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dic tumst malesuada congue magna at finibus. In hac habitasse platea.</p>
+							</div>
+							<div class="news_link"><a href="{% url 'blog' %}">Read More</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- News Item -->
+				<div class="col-lg-4 news_col">
+					<div class="news_item">
+						<div class="news_image">
+							<img src="{% static 'images/news_2.jpg' %}" alt="">
+							<div class="news_date d-flex flex-column align-items-center justify-content-center">
+								<div class="news_day">05</div>
+								<div class="news_month">March, 2018</div>
+							</div>
+						</div>
+						<div class="news_content">
+							<div class="news_title">Help us raise money for the kids</div>
+							<div class="news_text">
+								<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dic tumst malesuada congue magna at finibus. In hac habitasse platea.</p>
+							</div>
+							<div class="news_link"><a href="{% url 'blog' %}">Read More</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- News Item -->
+				<div class="col-lg-4 news_col">
+					<div class="news_item">
+						<div class="news_image">
+							<img src="{% static 'images/news_3.jpg' %}" alt="">
+							<div class="news_date d-flex flex-column align-items-center justify-content-center">
+								<div class="news_day">03</div>
+								<div class="news_month">March, 2018</div>
+							</div>
+						</div>
+						<div class="news_content">
+							<div class="news_title">The best way to pray</div>
+							<div class="news_text">
+								<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dic tumst malesuada congue magna at finibus. In hac habitasse platea.</p>
+							</div>
+							<div class="news_link"><a href="{% url 'blog' %}">Read More</a></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_content d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="newsletter_title">Subscribe to our newsletter</div>
+						<div class="newsletter_form_container ml-lg-auto">
+							<form action="#" id="newsletter_form" class="newsletter_form">
+								<input type="email" class="newsletter_input" placeholder="Your email" required="required">
+								<button id="newsletter_button" class="newsletter_button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Footer Column -->
+				<div class="col-lg-4 footer_col">
+
+					<!-- Logo -->
+					<div class="logo_container">
+						<div class="logo">
+							<a href="#">
+								<div class="logo_subtitle"><h4>All The Gospel</h4></div>
+								<h3>ASSEMBLIES OF GOD CHURCH</h3>
+								<img src="{% static 'images/download2.jpg' %}" alt="">
+							</a>
+						</div>
+
+						<!--<div class="logo_subtitle">Church template</div>-->
+					</div>
+					<div class="footer_social">
+						<ul>
+							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Footer Column -->
+				<div class="col-lg-4 footer_col">
+					<div class="footer_links">
+						<div class="footer_title">Useful Links</div>
+						<ul>
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="{% url 'ministriess' %}">Ministries</a></li>
+							<li><a href="{% url 'sermons' %}">Sermons</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							<li><a href="{% url 'bulletins' %}">Bulletin</a></li>
+							<li><a href="{% url 'abouts' %}">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Footer Column -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_contact">
+						<div class="footer_title">Contact Us</div>
+						<ul>
+							<li><span>Address: </span>28, Olorunsogo Street, Eleyele, Ile- Ife, Osun State, Nigeria.</li>
+							<li class="footer_contact_phone">
+								<span>Phone: </span>
+								<div>
+									<div> +234 809 3885 000</div>
+								</div>
+							</li>
+							<li><span>Email: </span>yourmail@gmail.com</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Copyright -->
+		<div class="copyright text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+
+	</footer>
+
+</div>
+
+<script type='text/javascript' src='//cdnjs.cloudfl'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/"></script>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head>
+        <title>ASSEMBLIES OF GOD</title>
+        <link href="{% static 'styles/main_styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1><a href="{% url 'home' %}">Assemblies of God</a></h1>
+        </header>
+        <div>
+            {% block content %}
+            {% for sermon in sermons %}
+           <p> {{ sermon.body }}</p>
+            {% endfor %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
